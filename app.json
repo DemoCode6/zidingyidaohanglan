@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/district/district",
+    "pages/friends/friends",
+    "pages/push/push",
+    "pages/user/user"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "自定义导航栏",
+    "navigationStyle": "custom",
+    "navigationBarBackgroundColor": "#01aef9",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#0080fb",
+    "list": [
+      {
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/index.png",
+      "selectedIconPath": "images/index1.png"
+    },
+      {
+      "pagePath": "pages/district/district",
+      "text": "商圈",
+      "iconPath": "images/district.png",
+      "selectedIconPath": "images/district1.png"
+    },
+      {
+      "pagePath": "pages/district/district",
+      "text": "发布",
+      "iconPath": "images/push.png",
+      "selectedIconPath": "images/push.png"
+    },
+      {
+      "pagePath": "pages/friends/friends",
+      "text": "交友",
+      "iconPath": "images/friends.png",
+      "selectedIconPath": "images/friends1.png"
+    },
+      {
+      "pagePath": "pages/user/user",
+      "text": "我的",
+      "iconPath": "images/user.png",
+      "selectedIconPath": "images/user1.png"
+    }
+  ]
+  },
+  "usingComponents": {
+    "navBar": "/components/navBar/navBar"
+  },
+  "sitemapLocation": "sitemap.json"
+}

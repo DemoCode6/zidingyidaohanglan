@@ -1,0 +1,144 @@
+<!-- <navBar 
+    title-text="自定义导航栏" 
+    back-icon="/images/back@3x.png"
+    home-icon="/images/home_icon@3x.png"
+    background="#f2f2f2"
+    bindback="back"/> -->
+<navBar title-text="大学城" home-icon="/images/home_icon@3x.png" background="linear-gradient(to right, #007efb , #01aef9)" font-family="PingFang" bindback="back" />
+<!-- 头部固定定位需要用这个盒子自定义高度撑起来 -->
+<view style='height: {{status + navHeight}}px; width:100%'></view>
+<!-- <view style="height:128rpx;width:100%"> -->
+<view class="search">
+	<view>
+		<image src="/images/search.png"></image>
+	</view>
+	<view class="search2"><text> | </text>输入您想知道的内容</view>
+</view>
+
+<!-- swiper -->
+<view class="top_box">
+	<view class="wrap">
+		<swiper class="swipers" autoplay="{{autoplay}}" current="{{currentSwiper}}" circular="{{circular}}" bindchange="swiperChange">
+			<block wx:for="{{imgs}}" wx:key="imgs">
+				<swiper-item>
+					<image src="{{item.url}}"></image>
+				</swiper-item>
+			</block>
+		</swiper>
+		<!--重置小圆点的样式  -->
+		<view class="dots">
+			<block wx:for="{{imgs}}" wx:key="imgs1">
+				<view class="dot{{index == currentSwiper ? ' active' : ''}}"></view>
+			</block>
+		</view>
+	</view>
+</view>
+
+<view class="page_body">
+	<!-- 列表 -->
+	<view class="list_big_box">
+		<view class="list_box" wx:for="{{5}}" wx:key="item">
+			<view class="list_box1">
+				<image src="/images/list3.png"></image>
+			</view>
+			<view>消防答题</view>
+		</view>
+	</view>
+
+	<!-- 主体图片 -->
+	<view class="main_img">
+		<image src="/images/main_img.png"></image>
+	</view>
+
+	<!-- 公告 -->
+	<view class="swiper_box">
+		<view class="swiper_gg">
+			<image src="/images/notice.png"></image>
+		</view>
+		<view class="page-section page-section-spacing swiper">
+			<swiper autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" vertical="{{vertical}}" circular="{{circular}}" class="shuxiang">
+				<block wx:for="{{background}}" wx:key="*this">
+					<swiper-item>
+						<view class="swiper-item {{item}}">{{item}}</view>
+					</swiper-item>
+				</block>
+			</swiper>
+		</view>
+	</view>
+
+	<view class="new_msg">最新消息</view>
+	<!-- 学院贴子详情 -->
+	<view class="tizi_info" wx:for="{{3}}" wx:key="item">
+		<view class="Post_top">
+			<view class="Post_top1">
+				<view>
+					<image src="/images/touxiang.png"></image>
+				</view>
+			</view>
+			<view class="Post_top2">
+				<view>晋中学院</view>
+				<view class="jiaoyou">
+					<text>交友大厅</text>
+					<text>找伙伴</text>
+				</view>
+			</view>
+		</view>
+		<view class="article">如果说友谊是一颗常青树，那么，浇灌它的必定是出自心田的清泉;如果说友谊是-朵开不败的鲜花,那么，照耀它的必定是从心中升起的太阳。</view>
+		<view class="info_img_box">
+			<view class="info_img" wx:for="{{4}}" wx:key="item">
+				<image src="/images/info1.png"></image>
+			</view>
+		</view>
+
+<!-- 视频封面 -->
+		<view class="video_img_box">
+			<view class="video_img1"><image src="/images/video_img1.png"></image></view>
+			<view class="video_img2"><image src="/images/video_img2.png"></image></view>
+		</view>
+
+		<!-- 日期 -->
+		<view class="date_box">
+			<view class="date_box1">
+				<text>2020.5.21</text>
+				<text>21:34</text>
+				<text>发布</text>
+			</view>
+			<view>离你 520m</view>
+		</view>
+		<!-- 定位地址 -->
+		<view class="address_box">
+			<image src="/images/info_icon1.png"></image>
+			<text>晋中学院2号学生公寓（大学街）</text>
+		</view>
+
+		<!-- 浏览 点赞 -->
+		<view class="browse_box">
+			<view class="browse_box1">
+				<image src="/images/info_icon2.png"></image>
+				<text class="browse_box1_text">2020</text>
+				<text>浏览</text>
+			</view>
+			<view class="browse_box2">
+				<image src="{{dianzanclick==true ? '/images/info_icon33.png' : '/images/info_icon3.png'}}" catchtap="dianzanclick" data-index="{{index}}"></image>
+				<text class="browse_box1_text">20</text>
+				<text>点赞</text>
+			</view>
+		</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</view>
+
+</view>
+<!-- </scroll-view> -->
